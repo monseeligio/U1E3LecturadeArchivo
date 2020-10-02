@@ -1,0 +1,13 @@
+package u1e3listasyarchivos;
+
+public class U1E3ListasyArchivos {
+
+
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        LeerArchivo instancia =new LeerArchivo();
+        instancia.Ordenar();
+    }
+    
+}
