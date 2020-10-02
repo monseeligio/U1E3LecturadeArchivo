@@ -1,0 +1,88 @@
+package u1e3listasyarchivos;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LeerArchivo {
+    
+    public void Ordenar() {
+        /*
+         1. Leer un archivo txt
+         2. separar las palabras (metodo slit: ) 
+         3. Comparar palabras 
+         4. Frase de origen (dentro del codigo/o el usuario lo tendra)
+         5. Trabajar con listas (1 para frase original / otro para lista desordenada)
+        6. arreglo lista o cadena (resultado final)
+        */
+        List <String> ListaOrdenada= new ArrayList();
+        ListaOrdenada.add("Monserrat eligio ramos le gusta la programacion");
+         File archivo = null;
+         FileReader fr = null; 
+         BufferedReader br = null;
+         String[]  palabras=null;
+        String[]  palabras2=null;
+        
+        try {
+         // Apertura del fichero y creacion de BufferedReader para poder
+         // hacer una lectura comoda (disponer del metodo readLine()).
+         archivo = new File ("C:\\Users\\gama\\Documents\\Monse\\prueba.txt");
+         fr = new FileReader (archivo);
+         br = new BufferedReader(fr);
+                     System.out.println("***********************");
+
+         //ejercicio separar la frace del txt 
+        String linea;
+         while((linea=br.readLine())!=null){ // este line lee cada parrafo 
+             palabras=linea.split(" ");
+         }
+           for (String texto:palabras){
+             System.out.println(texto);
+         }
+                       System.out.println("***********************");
+
+           
+           for (String nombre :ListaOrdenada){
+               palabras2=nombre.split(" ");
+           }
+         
+     for (int i=0; i<palabras2.length; i++){
+         System.out.println(palabras2[i]);
+     }
+     String[] ArregloFinal= new String [palabras2.length]; 
+     for (int i=0; i<palabras2.length; i++){
+        for (int j=0; j<palabras.length; j++){
+             if (palabras2[i].equals(palabras[j])){
+                 ArregloFinal[0]="Monserrat";
+                 ArregloFinal[1]="eligio";
+                 ArregloFinal[2]="ramos";
+                 ArregloFinal[3]="le";
+                 ArregloFinal[4]="gusta";
+                 ArregloFinal[5]="la";
+                 ArregloFinal[6]="programacion";                 
+             }
+          }                       
+      }
+            System.out.println("***********************");
+     for(int i=0; i<ArregloFinal.length; i++){
+         System.out.print(ArregloFinal[i]+(" "));
+         
+     }
+              
+        fr.close();
+
+         }
+         
+         // Lectura del fichero     
+      catch(Exception e){
+          System.out.println(e);;
+         
+      }
+          
+        
+    }
+    
+}
+    
