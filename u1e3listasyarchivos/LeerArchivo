@@ -1,4 +1,4 @@
-package u1e3listasyarchivos;
+ackage u1e3listasyarchivos;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,7 +18,7 @@ public class LeerArchivo {
         6. arreglo lista o cadena (resultado final)
         */
         List <String> ListaOrdenada= new ArrayList();
-        ListaOrdenada.add("Monserrat eligio ramos le gusta la programacion");
+        ListaOrdenada.add("Hola buenas noches");
          File archivo = null;
          FileReader fr = null; 
          BufferedReader br = null;
@@ -55,13 +55,7 @@ public class LeerArchivo {
      for (int i=0; i<palabras2.length; i++){
         for (int j=0; j<palabras.length; j++){
              if (palabras2[i].equals(palabras[j])){
-                 ArregloFinal[0]="Monserrat";
-                 ArregloFinal[1]="eligio";
-                 ArregloFinal[2]="ramos";
-                 ArregloFinal[3]="le";
-                 ArregloFinal[4]="gusta";
-                 ArregloFinal[5]="la";
-                 ArregloFinal[6]="programacion";                 
+                 ArregloFinal[i]=palabras2[i];                
              }
           }                       
       }
